@@ -36,3 +36,12 @@ jobs:
         switch: off
       - TASK: managed
         bump: minor
+
+# PROD deployment for VISUALIZER to Amazon ECS
+  - name: dv-prod-ecs
+    type: deploy
+    steps:
+      - IN: dv-rel
+        switch: off
+      - IN: env-prod-ecs
+      - TASK: managed
