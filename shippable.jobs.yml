@@ -23,3 +23,16 @@ jobs:
       - TASK: managed
 
 # / TEST deployment for VISUALIZER to Amazon ECS
+
+# Add a release job
+  - name: dv-rel
+    type: release
+    steps:
+      - IN: dv-ver
+        switch: off
+      - IN: dv-test-ecs
+        switch: off
+      - IN: dv-trigger
+        switch: off
+      - TASK: managed
+        bump: minor
