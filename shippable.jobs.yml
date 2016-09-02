@@ -42,7 +42,7 @@ jobs:
   - name: dv-prod-ecs
     type: deploy
     steps:
-      - IN: dv-rel
+      - IN: dv-test-ecs
         switch: off
       - IN: env-prod-ecs
       - TASK: managed
