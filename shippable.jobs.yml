@@ -17,7 +17,7 @@ jobs:
   - name: dv-test-ecs
     type: deploy
     steps:
-      - IN: dv-man
+      - IN: dv-rel
 #      - IN: dv-params
       - IN: env-test-ecs
       - TASK: managed
@@ -30,7 +30,9 @@ jobs:
     steps:
       - IN: dv-ver
         switch: off
-      - IN: dv-test-ecs
+#      - IN: dv-test-ecs
+#        switch: off
+      - IN: dv-man
         switch: off
       - IN: dv-trigger
       - TASK: managed
